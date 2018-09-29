@@ -1,0 +1,16 @@
+repeatStr(6, "I") // "IIIIII"
+repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
+
+
+#include <string.h>
+
+char *repeat_str(size_t count, const char *src) {
+char *ret = malloc(strlen (src) * count *sizeof(src));
+while (count>0){
+strcat( ret, src);
+count--;
+}
+printf("string is: %s", ret);
+return ret;
+free(ret);
+}
